@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://81bkt3i1sw5l"]
+
+[ext_resource type="Script" path="res://Scenes/game_manager.gd" id="1_gp6p3"]
+[ext_resource type="PackedScene" uid="uid://b2srvpwsbfpjs" path="res://Scenes/Menus/main_menu.tscn" id="2_xx47n"]
+
+[node name="GameManager" type="Node"]
+script = ExtResource("1_gp6p3")
+
+[node name="MainScene" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MainMenu" parent="MainScene" instance=ExtResource("2_xx47n")]
+layout_mode = 1
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="MusicPlayer" type="AudioStreamPlayer2D" parent="."]
