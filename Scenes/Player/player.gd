@@ -1,9 +1,9 @@
 extends CharacterBody2D
 
-const SPEED = 130.0
-const JUMP_VELOCITY = -300.0
+const SPEED = 150.0
+const JUMP_VELOCITY = -350.0
 const SLIDE_DECAY_SPEED = 150.0
-const SLIDE_SPEED = 200.0
+const SLIDE_SPEED = 300.0
 
 var lock_direction:bool = false
 var direction:float = 0
@@ -38,6 +38,7 @@ func handle_input():
     if Input.is_action_just_pressed("jump") and is_on_floor():
         velocity.y = JUMP_VELOCITY
         current_state = State.JUMPING
+       
     elif Input.is_action_pressed("move_down") and is_on_floor():
         if Input.is_action_just_pressed("move_down"):
             velocity.x = SLIDE_SPEED * direction
@@ -107,3 +108,4 @@ func direct_sprite_based_on_velocity():
         animated_sprite_2d.flip_h = true
     elif velocity.x > 0:
         animated_sprite_2d.flip_h = false
+     
