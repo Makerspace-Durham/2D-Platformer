@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=4 uid="uid://bso33oe0ip1ht"]
+[gd_scene load_steps=8 format=4 uid="uid://bso33oe0ip1ht"]
 
 [ext_resource type="Texture2D" uid="uid://0lvie2nqby6p" path="res://Assets/Sprites/monochrome_tilemap_packed.png" id="1_bpo3c"]
 [ext_resource type="Texture2D" uid="uid://3se0wjmxp4tr" path="res://Assets/Sprites/monochrome_tilemap_transparent_packed.png" id="2_yyjpq"]
 [ext_resource type="PackedScene" uid="uid://cowaxvme6in5l" path="res://Scenes/Player/player.tscn" id="3_cpfco"]
+[ext_resource type="PackedScene" uid="uid://diy8se6uul2bd" path="res://Scenes/Enemies/Kookaburras/kookaburras.tscn" id="4_wl6p2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_15ufp"]
 texture = ExtResource("1_bpo3c")
@@ -855,3 +856,6 @@ position = Vector2(0, -4)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(0, -3)
+
+[node name="kookaburras" parent="." instance=ExtResource("4_wl6p2")]
+position = Vector2(210, -120)
