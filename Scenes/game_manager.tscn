@@ -1,10 +1,22 @@
-[gd_scene load_steps=3 format=3 uid="uid://81bkt3i1sw5l"]
+[gd_scene load_steps=3 format=3 uid="uid://b48kmkqe7ohcg"]
 
-[ext_resource type="Script" path="res://Scenes/game_manager.gd" id="1_gp6p3"]
 [ext_resource type="PackedScene" uid="uid://b2srvpwsbfpjs" path="res://Scenes/Menus/main_menu.tscn" id="2_xx47n"]
 
+[sub_resource type="GDScript" id="GDScript_p3qaj"]
+script/source = "extends Node
+
+@onready var musicPlayer = $MusicPlayer #AudioStreamPlayer node
+@onready var mainScene = $MainScene #MainScene node
+
+#Used for changing scenes in the game
+func change_scene(scene: String):
+	mainScene.get_child(0).queue_free() #Free the maine scene from it's child or children
+	var s = ResourceLoader.load(\"res://Scenes/Sandbox/jiarguet_sandbox.tscn\") #Load up an instance of the given scene to be displayed
+	mainScene.add_child(s.instantiate()) #Add the scene instance as a child to main scene
+"
+
 [node name="GameManager" type="Node"]
-script = ExtResource("1_gp6p3")
+script = SubResource("GDScript_p3qaj")
 
 [node name="MainScene" type="Control" parent="."]
 layout_mode = 3
