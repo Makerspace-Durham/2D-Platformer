@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cqx8ffn6qid4o"
-path="res://.godot/imported/bomber.png-0a243e9a5228d6f868fa5eda1629e1cd.ctex"
+uid="uid://bjythgq5xya6u"
+path="res://.godot/imported/brick_wall_end.png-1c6f25fbcfb6f3f58495b82b69fae57f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Environment/bomber.png"
-dest_files=["res://.godot/imported/bomber.png-0a243e9a5228d6f868fa5eda1629e1cd.ctex"]
+source_file="res://Assets/Environment/Misc/brick_wall_end.png"
+dest_files=["res://.godot/imported/brick_wall_end.png-1c6f25fbcfb6f3f58495b82b69fae57f.ctex"]
 
 [params]
 

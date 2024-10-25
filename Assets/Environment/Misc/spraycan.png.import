@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bqc5x715uq8te"
-path="res://.godot/imported/torns.png-4718fbd49366d98d958dd27d407ee719.ctex"
+uid="uid://cd4eqvyq2udir"
+path="res://.godot/imported/spraycan.png-c7784bac4e86ad4a13ec4520867912eb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Environment/torns.png"
-dest_files=["res://.godot/imported/torns.png-4718fbd49366d98d958dd27d407ee719.ctex"]
+source_file="res://Assets/Environment/Misc/spraycan.png"
+dest_files=["res://.godot/imported/spraycan.png-c7784bac4e86ad4a13ec4520867912eb.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://qbmx2uscdx0l"
-path="res://.godot/imported/trashcan.png-f60d8ec5e52d598c710ada7afb959a83.ctex"
+uid="uid://cqx8ffn6qid4o"
+path="res://.godot/imported/bomber.png-f04cda6b050680325f9862c517ce34b5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Environment/trashcan.png"
-dest_files=["res://.godot/imported/trashcan.png-f60d8ec5e52d598c710ada7afb959a83.ctex"]
+source_file="res://Assets/Environment/Misc/bomber.png"
+dest_files=["res://.godot/imported/bomber.png-f04cda6b050680325f9862c517ce34b5.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dhaceo7kgm3b3"
-path="res://.godot/imported/vines.png-25f130d9a19474013a9f9d9e708c2899.ctex"
+uid="uid://qbmx2uscdx0l"
+path="res://.godot/imported/trashcan.png-47d7a936e7cfea3ee41904215e546233.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Environment/vines.png"
-dest_files=["res://.godot/imported/vines.png-25f130d9a19474013a9f9d9e708c2899.ctex"]
+source_file="res://Assets/Environment/Misc/trashcan.png"
+dest_files=["res://.godot/imported/trashcan.png-47d7a936e7cfea3ee41904215e546233.ctex"]
 
 [params]
 
