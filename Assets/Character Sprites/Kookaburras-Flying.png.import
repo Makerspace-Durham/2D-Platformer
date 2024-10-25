@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b0jv531i3jiq0"
-path="res://.godot/imported/Bomber_PLACEHOLDER.png-243f7b6f911925c746c743f8cca98067.ctex"
+uid="uid://duin8tq1kgwnt"
+path="res://.godot/imported/Kookaburras-Flying.png-5c7b5f11512a12eda1ff3523a712b146.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Characters/Bomber_PLACEHOLDER.png"
-dest_files=["res://.godot/imported/Bomber_PLACEHOLDER.png-243f7b6f911925c746c743f8cca98067.ctex"]
+source_file="res://Assets/Character Sprites/Kookaburras-Flying.png"
+dest_files=["res://.godot/imported/Kookaburras-Flying.png-5c7b5f11512a12eda1ff3523a712b146.ctex"]
 
 [params]
 

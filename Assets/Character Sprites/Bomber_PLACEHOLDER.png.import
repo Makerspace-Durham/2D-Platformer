@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c85643a6p25px"
-path="res://.godot/imported/basic_spritesheet.png-6d937946147bf36cc46718df6ba1c839.ctex"
+uid="uid://b0jv531i3jiq0"
+path="res://.godot/imported/Bomber_PLACEHOLDER.png-b2227cb954df6adaaf74de32617db40c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Environment/basic_spritesheet.png"
-dest_files=["res://.godot/imported/basic_spritesheet.png-6d937946147bf36cc46718df6ba1c839.ctex"]
+source_file="res://Assets/Character Sprites/Bomber_PLACEHOLDER.png"
+dest_files=["res://.godot/imported/Bomber_PLACEHOLDER.png-b2227cb954df6adaaf74de32617db40c.ctex"]
 
 [params]
 

@@ -4,3 +4,5 @@ extends Node
 
 #Levels
 var TEST_LEVEL="res://Scenes/Levels/test.tscn"
+
+#Misc

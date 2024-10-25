@@ -1,0 +1,89 @@
+[gd_scene load_steps=13 format=3 uid="uid://diy8se6uul2bd"]
+
+[ext_resource type="Texture2D" uid="uid://duin8tq1kgwnt" path="res://Assets/Character Sprites/Kookaburras-Flying.png" id="1_dqmyj"]
+[ext_resource type="Script" path="res://Scenes/Characters/Enemies/kookaburras.gd" id="1_ra87c"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l0qi2"]
+atlas = ExtResource("1_dqmyj")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vq4wb"]
+atlas = ExtResource("1_dqmyj")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_csaef"]
+atlas = ExtResource("1_dqmyj")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a1rp1"]
+atlas = ExtResource("1_dqmyj")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j1tel"]
+atlas = ExtResource("1_dqmyj")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pb3mc"]
+atlas = ExtResource("1_dqmyj")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w6ybh"]
+atlas = ExtResource("1_dqmyj")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0oeu1"]
+atlas = ExtResource("1_dqmyj")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_55720"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l0qi2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vq4wb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_csaef")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a1rp1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j1tel")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pb3mc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w6ybh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0oeu1")
+}],
+"loop": true,
+"name": &"fly",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4jtyt"]
+size = Vector2(20, 8)
+
+[node name="kookaburras" type="Node2D"]
+script = ExtResource("1_ra87c")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_55720")
+animation = &"fly"
+frame_progress = 0.997635
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -2)
+shape = SubResource("RectangleShape2D_4jtyt")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
