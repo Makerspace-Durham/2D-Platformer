@@ -20,3 +20,5 @@ layout_mode = 1
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="MusicPlayer" type="AudioStreamPlayer2D" parent="."]
+volume_db = -10.0
+autoplay = true
