@@ -1,7 +1,13 @@
-[gd_scene load_steps=21 format=3 uid="uid://cowaxvme6in5l"]
+[gd_scene load_steps=28 format=3 uid="uid://cowaxvme6in5l"]
 
-[ext_resource type="Script" path="res://Scenes/Player/player.gd" id="1_3fqip"]
+[ext_resource type="Script" path="res://Scenes/Player/player.gd" id="1_vwvmg"]
 [ext_resource type="Texture2D" uid="uid://bodvah0ocavm6" path="res://Assets/Sprites/Bomber_PLACEHOLDER[DR2].png" id="3_amojq"]
+[ext_resource type="Script" path="res://Scenes/Player/Actions/idle.gd" id="3_m2ava"]
+[ext_resource type="Script" path="res://Scenes/Player/Actions/run.gd" id="4_qdlwe"]
+[ext_resource type="Script" path="res://Scenes/Player/Input/input.gd" id="4_renkv"]
+[ext_resource type="Script" path="res://Scenes/Player/Actions/jump.gd" id="5_y0fbr"]
+[ext_resource type="Script" path="res://Scenes/Player/Actions/fall.gd" id="6_wmesx"]
+[ext_resource type="Script" path="res://Scenes/Player/Actions/gliding.gd" id="7_e2w2m"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e356d"]
 atlas = ExtResource("3_amojq")
@@ -10,6 +16,10 @@ region = Rect2(0, 0, 32, 32)
 [sub_resource type="AtlasTexture" id="AtlasTexture_8b35b"]
 atlas = ExtResource("3_amojq")
 region = Rect2(448, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uvt2w"]
+atlas = ExtResource("3_amojq")
+region = Rect2(224, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fue4t"]
 atlas = ExtResource("3_amojq")
@@ -87,6 +97,14 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_uvt2w")
+}],
+"loop": true,
+"name": &"fall",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_fue4t")
 }, {
 "duration": 1.0,
@@ -96,7 +114,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_301bt")
 }],
 "loop": true,
-"name": &"fly",
+"name": &"glide",
 "speed": 5.0
 }, {
 "frames": [{
@@ -159,19 +177,43 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_j24jl"]
-radius = 13.0
+radius = 12.0
 
 [node name="Player" type="CharacterBody2D"]
-script = ExtResource("1_3fqip")
+script = ExtResource("1_vwvmg")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -16)
 sprite_frames = SubResource("SpriteFrames_qjaje")
-animation = &"jump"
+animation = &"double_jump"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -13)
 shape = SubResource("CircleShape2D_j24jl")
+
+[node name="PlayerStates" type="Node" parent="."]
+
+[node name="Idle" type="Node" parent="PlayerStates"]
+script = ExtResource("3_m2ava")
+
+[node name="Running" type="Node" parent="PlayerStates"]
+script = ExtResource("4_qdlwe")
+
+[node name="Jump" type="Node" parent="PlayerStates"]
+script = ExtResource("5_y0fbr")
+
+[node name="DoubleJumpTimer" type="Timer" parent="PlayerStates/Jump"]
+wait_time = 0.3
+one_shot = true
+
+[node name="Falling" type="Node" parent="PlayerStates"]
+script = ExtResource("6_wmesx")
+
+[node name="Gliding" type="Node" parent="PlayerStates"]
+script = ExtResource("7_e2w2m")
+
+[node name="Input" type="Node" parent="."]
+script = ExtResource("4_renkv")
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
