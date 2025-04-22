@@ -1,8 +1,9 @@
-[gd_scene load_steps=13 format=4 uid="uid://cswkfrkql6dad"]
+[gd_scene load_steps=15 format=4 uid="uid://cswkfrkql6dad"]
 
 [ext_resource type="Texture2D" uid="uid://c85643a6p25px" path="res://Assets/Environment/basic_tileset.png" id="1_mpkvf"]
 [ext_resource type="Texture2D" uid="uid://bkyk4c04skr8x" path="res://Assets/Environment/Misc/brick_wall.png" id="2_uc6kv"]
 [ext_resource type="Texture2D" uid="uid://bjythgq5xya6u" path="res://Assets/Environment/Misc/brick_wall_end.png" id="3_ippxl"]
+[ext_resource type="Texture2D" uid="uid://bgvyo37mwbte0" path="res://Assets/Environment/Jungle_Tileset.png" id="4_3lu73"]
 [ext_resource type="PackedScene" uid="uid://cowaxvme6in5l" path="res://Scenes/Characters/player.tscn" id="4_louo5"]
 [ext_resource type="PackedScene" uid="uid://diy8se6uul2bd" path="res://Scenes/Characters/Enemies/kookaburras.tscn" id="5_v2x7o"]
 
@@ -55,9 +56,41 @@ texture = ExtResource("2_uc6kv")
 texture = ExtResource("3_ippxl")
 0:0/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7kcqr"]
+texture = ExtResource("4_3lu73")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+0:9/0 = 0
+1:9/0 = 0
+2:9/0 = 0
+3:9/0 = 0
+4:9/0 = 0
+5:9/0 = 0
+6:9/0 = 0
+7:9/0 = 0
+0:3/size_in_atlas = Vector2i(2, 2)
+0:3/0 = 0
+2:3/size_in_atlas = Vector2i(2, 2)
+2:3/0 = 0
+6:3/size_in_atlas = Vector2i(2, 2)
+6:3/0 = 0
+4:3/0 = 0
+4:4/0 = 0
+5:3/0 = 0
+5:4/0 = 0
+
 [sub_resource type="TileSet" id="TileSet_sbfgb"]
 sources/0 = SubResource("TileSetAtlasSource_xyxn7")
 sources/1 = SubResource("TileSetAtlasSource_1w4w7")
+sources/2 = SubResource("TileSetAtlasSource_7kcqr")
 
 [node name="Test" type="Node2D"]
 
@@ -72,7 +105,7 @@ tile_map_data = PackedByteArray("AADY/xEAAAAAAAAAAADZ/xEAAAABAAAAAADa/xEAAAABAAA
 tile_set = SubResource("TileSet_o7w8b")
 
 [node name="BackDrops" type="TileMapLayer" parent="Environment"]
-tile_map_data = PackedByteArray("AAAfAAwAAAAAAAAAAAAfAA0AAAAAAAAAAAAfAA4AAAAAAAAAAAAfAA8AAAAAAAAAAAAfABAAAAAAAAAAAAAgAAwAAAAAAAAAAAAgAA0AAAAAAAAAAAAgAA4AAAAAAAAAAAAgAA8AAAAAAAAAAAAgABAAAAAAAAAAAAAhAAwAAAAAAAAAAAAhAA0AAAAAAAAAAAAhAA4AAAAAAAAAAAAhAA8AAAAAAAAAAAAhABAAAAAAAAAAAAAiAAwAAAAAAAAAAAAiAA0AAAAAAAAAAAAiAA4AAAAAAAAAAAAiAA8AAAAAAAAAAAAiABAAAAAAAAAAAAAjAAwAAAAAAAAAAAAjAA0AAAAAAAAAAAAjAA4AAAAAAAAAAAAjAA8AAAAAAAAAAAAjABAAAAAAAAAAAAAkAAwAAAAAAAAAAAAkAA0AAAAAAAAAAAAkAA4AAAAAAAAAAAAkAA8AAAAAAAAAAAAkABAAAAAAAAAAAAAlAAwAAAAAAAAAAAAlAA0AAAAAAAAAAAAlAA4AAAAAAAAAAAAlAA8AAAAAAAAAAAAlABAAAAAAAAAAAAAmAAwAAQAAAAAAAAAmAA0AAQAAAAAAAAAmAA4AAQAAAAAAAAAmAA8AAQAAAAAAAAAmABAAAQAAAAAAAAA=")
+tile_map_data = PackedByteArray("AAAfAAwAAAAAAAAAAAAfAA0AAAAAAAAAAAAfAA4AAAAAAAAAAAAfAA8AAAAAAAAAAAAfABAAAAAAAAAAAAAgAAwAAAAAAAAAAAAgAA0AAAAAAAAAAAAgAA4AAAAAAAAAAAAgAA8AAAAAAAAAAAAgABAAAAAAAAAAAAAhAAwAAAAAAAAAAAAhAA0AAAAAAAAAAAAhAA4AAAAAAAAAAAAhAA8AAAAAAAAAAAAhABAAAAAAAAAAAAAiAAwAAAAAAAAAAAAiAA0AAAAAAAAAAAAiAA4AAAAAAAAAAAAiAA8AAAAAAAAAAAAiABAAAAAAAAAAAAAjAAwAAAAAAAAAAAAjAA0AAAAAAAAAAAAjAA4AAAAAAAAAAAAjAA8AAAAAAAAAAAAjABAAAAAAAAAAAAAkAAwAAAAAAAAAAAAkAA0AAAAAAAAAAAAkAA4AAAAAAAAAAAAkAA8AAAAAAAAAAAAkABAAAAAAAAAAAAAlAAwAAAAAAAAAAAAlAA0AAAAAAAAAAAAlAA4AAAAAAAAAAAAlAA8AAAAAAAAAAAAlABAAAAAAAAAAAAAmAAwAAQAAAAAAAAAmAA0AAQAAAAAAAAAmAA4AAQAAAAAAAAAmAA8AAQAAAAAAAAAmABAAAQAAAAAAAADo/xAAAgAAAAAAAADq/xAAAgAAAAAAAADu/xAAAgABAAAAAADk/xAAAgABAAAAAAD2/xAAAgADAAAAAADz/xAAAgADAAAAAADr/xAAAgADAAAAAADm/xAAAgAEAAAAAAARABAAAgAEAAAAAAD+/xAAAgAGAAAAAAAFABAAAgAGAAAAAAABABAAAgAFAAAAAAAaABAAAgAFAAAAAAANAA8AAgAEAAMAAAANABAAAgAEAAQAAAAOAA8AAgAFAAMAAAAOABAAAgAFAAQAAAA=")
 tile_set = SubResource("TileSet_sbfgb")
 
 [node name="Player" parent="." instance=ExtResource("4_louo5")]
