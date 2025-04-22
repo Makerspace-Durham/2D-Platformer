@@ -34,7 +34,6 @@ func _on_timer_timeout():
 	$Timer.wait_time = choose_timer_wait_time([0.5, 0.8])
 	if !is_enemy_chase:
 		direction = choose_timer_wait_time([Vector2.RIGHT, Vector2.UP, Vector2.LEFT, Vector2.DOWN])
-		print(direction)
 
 func choose_timer_wait_time(array):
 	array.shuffle()
