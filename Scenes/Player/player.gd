@@ -25,8 +25,8 @@ var has_double_jumped = false
 # Player Properties
 @export var max_health: int = 100
 var health: int = max_health:
-    set(value):
-        health = value
+	set(value):
+		health = value
 
 @export var max_double_jump_count: int = 1
 var double_jump_count: int = max_double_jump_count
@@ -39,33 +39,33 @@ var gravity = WORLD_GRAVITY
 var current_state: Node
 
 func _ready():
-    current_state = idle
+	current_state = idle
 
 func _physics_process(delta):
-    var input = input_gatherer.collect_active_inputs()
-    apply_gravity(delta)
-    current_state.control(self, input, delta)
-    manage_player_behaviors()
-    move_and_slide()
+	var input = input_gatherer.collect_active_inputs()
+	apply_gravity(delta)
+	current_state.control(self, input, delta)
+	manage_player_behaviors()
+	move_and_slide()
 
 func apply_gravity(delta):
-    if not is_on_floor():
-        velocity.y += gravity * delta
+	if not is_on_floor():
+		velocity.y += gravity * delta
 
 func direct_sprite_based_on_velocity():
-    # Flip the sprite based on the direction of the velocity
-    if velocity.x < 0:
-        animated_sprite_2d.flip_h = true
-    elif velocity.x > 0:
-        animated_sprite_2d.flip_h = false
+	# Flip the sprite based on the direction of the velocity
+	if velocity.x < 0:
+		animated_sprite_2d.flip_h = true
+	elif velocity.x > 0:
+		animated_sprite_2d.flip_h = false
 
 func exit_state_and_transition(player, input, delta, state):
-    current_state.exit_state(player, input, delta)
-    current_state = state
-    current_state.enter_state(player, input, delta)
+	current_state.exit_state(player, input, delta)
+	current_state = state
+	current_state.enter_state(player, input, delta)
 
 func manage_player_behaviors():
-    direct_sprite_based_on_velocity()
+	direct_sprite_based_on_velocity()
 
-    if is_on_floor():
-        double_jump_count = max_double_jump_count 
+	if is_on_floor():
+		double_jump_count = max_double_jump_count 
