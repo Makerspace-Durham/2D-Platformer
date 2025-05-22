@@ -4,6 +4,7 @@ extends Node
 
 #Levels
 var TEST_LEVEL="res://Scenes/Levels/test.tscn"
+var JUNGLE_DEMO="res://Scenes/Levels/jungle_demo.tscn"
 
 #Soundtrack
 var PIXELATED_DREAMS="res://Assets/Audio/Music/Pixelated Dreams.mp3"

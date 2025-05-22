@@ -3,13 +3,12 @@
 [ext_resource type="Texture2D" uid="uid://c85643a6p25px" path="res://Assets/Environment/basic_tileset.png" id="1_mpkvf"]
 [ext_resource type="Texture2D" uid="uid://bkyk4c04skr8x" path="res://Assets/Environment/Misc/brick_wall.png" id="2_uc6kv"]
 [ext_resource type="Texture2D" uid="uid://bjythgq5xya6u" path="res://Assets/Environment/Misc/brick_wall_end.png" id="3_ippxl"]
-[ext_resource type="PackedScene" uid="uid://cowaxvme6in5l" path="res://Scenes/Player/player.tscn" id="4_louo5"]
+[ext_resource type="Texture2D" uid="uid://b68mrcmre16e7" path="res://Assets/Environment/Jungle_Tileset.png" id="4_3lu73"]
+[ext_resource type="PackedScene" uid="uid://cowaxvme6in5l" path="res://Scenes/Characters/player.tscn" id="4_louo5"]
 [ext_resource type="PackedScene" uid="uid://diy8se6uul2bd" path="res://Scenes/Characters/Enemies/kookaburras.tscn" id="5_v2x7o"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dihu0"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mcigd"]
 texture = ExtResource("1_mpkvf")
-0:0/0 = 0
-0:1/0 = 0
 0:3/0 = 0
 0:4/0 = 0
 0:5/0 = 0
@@ -19,9 +18,9 @@ texture = ExtResource("1_mpkvf")
 1:5/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_g0ojd"]
-sources/0 = SubResource("TileSetAtlasSource_dihu0")
+sources/0 = SubResource("TileSetAtlasSource_mcigd")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xxbm8"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jttjn"]
 texture = ExtResource("1_mpkvf")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -45,19 +44,15 @@ texture = ExtResource("1_mpkvf")
 
 [sub_resource type="TileSet" id="TileSet_o7w8b"]
 physics_layer_0/collision_layer = 2
-sources/0 = SubResource("TileSetAtlasSource_xxbm8")
+sources/0 = SubResource("TileSetAtlasSource_jttjn")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xyxn7"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wm2tt"]
 texture = ExtResource("2_uc6kv")
 0:0/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1w4w7"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_d1sd7"]
 texture = ExtResource("3_ippxl")
 0:0/0 = 0
-
-[sub_resource type="TileSet" id="TileSet_sbfgb"]
-sources/0 = SubResource("TileSetAtlasSource_xyxn7")
-sources/1 = SubResource("TileSetAtlasSource_1w4w7")
 
 [node name="Test" type="Node2D"]
 
@@ -72,7 +67,7 @@ tile_map_data = PackedByteArray("AADY/xEAAAAAAAAAAADZ/xEAAAABAAAAAADa/xEAAAABAAA
 tile_set = SubResource("TileSet_o7w8b")
 
 [node name="BackDrops" type="TileMapLayer" parent="Environment"]
-tile_map_data = PackedByteArray("AAAfAAwAAAAAAAAAAAAfAA0AAAAAAAAAAAAfAA4AAAAAAAAAAAAfAA8AAAAAAAAAAAAfABAAAAAAAAAAAAAgAAwAAAAAAAAAAAAgAA0AAAAAAAAAAAAgAA4AAAAAAAAAAAAgAA8AAAAAAAAAAAAgABAAAAAAAAAAAAAhAAwAAAAAAAAAAAAhAA0AAAAAAAAAAAAhAA4AAAAAAAAAAAAhAA8AAAAAAAAAAAAhABAAAAAAAAAAAAAiAAwAAAAAAAAAAAAiAA0AAAAAAAAAAAAiAA4AAAAAAAAAAAAiAA8AAAAAAAAAAAAiABAAAAAAAAAAAAAjAAwAAAAAAAAAAAAjAA0AAAAAAAAAAAAjAA4AAAAAAAAAAAAjAA8AAAAAAAAAAAAjABAAAAAAAAAAAAAkAAwAAAAAAAAAAAAkAA0AAAAAAAAAAAAkAA4AAAAAAAAAAAAkAA8AAAAAAAAAAAAkABAAAAAAAAAAAAAlAAwAAAAAAAAAAAAlAA0AAAAAAAAAAAAlAA4AAAAAAAAAAAAlAA8AAAAAAAAAAAAlABAAAAAAAAAAAAAmAAwAAQAAAAAAAAAmAA0AAQAAAAAAAAAmAA4AAQAAAAAAAAAmAA8AAQAAAAAAAAAmABAAAQAAAAAAAAA=")
+tile_map_data = PackedByteArray("AAAfAAwAAAAAAAAAAAAfAA0AAAAAAAAAAAAfAA4AAAAAAAAAAAAfAA8AAAAAAAAAAAAfABAAAAAAAAAAAAAgAAwAAAAAAAAAAAAgAA0AAAAAAAAAAAAgAA4AAAAAAAAAAAAgAA8AAAAAAAAAAAAgABAAAAAAAAAAAAAhAAwAAAAAAAAAAAAhAA0AAAAAAAAAAAAhAA4AAAAAAAAAAAAhAA8AAAAAAAAAAAAhABAAAAAAAAAAAAAiAAwAAAAAAAAAAAAiAA0AAAAAAAAAAAAiAA4AAAAAAAAAAAAiAA8AAAAAAAAAAAAiABAAAAAAAAAAAAAjAAwAAAAAAAAAAAAjAA0AAAAAAAAAAAAjAA4AAAAAAAAAAAAjAA8AAAAAAAAAAAAjABAAAAAAAAAAAAAkAAwAAAAAAAAAAAAkAA0AAAAAAAAAAAAkAA4AAAAAAAAAAAAkAA8AAAAAAAAAAAAkABAAAAAAAAAAAAAlAAwAAAAAAAAAAAAlAA0AAAAAAAAAAAAlAA4AAAAAAAAAAAAlAA8AAAAAAAAAAAAlABAAAAAAAAAAAAAmAAwAAQAAAAAAAAAmAA0AAQAAAAAAAAAmAA4AAQAAAAAAAAAmAA8AAQAAAAAAAAAmABAAAQAAAAAAAADo/xAAAgADAAAAAADq/xAAAgAFAAAAAADu/xAAAgADAAAAAADk/xAAAgAFAAAAAAD2/xAAAgADAAAAAADz/xAAAgAHAAAAAADr/xAAAgADAAAAAADm/xAAAgAEAAAAAAARABAAAgAEAAAAAAD+/xAAAgAGAAAAAAAFABAAAgAGAAAAAAABABAAAgAFAAAAAAAaABAAAgAFAAAAAAANAA8AAgAEAAMAAAANABAAAgAEAAQAAAAOAA8AAgAFAAMAAAAOABAAAgAFAAQAAAA=")
 tile_set = SubResource("TileSet_sbfgb")
 
 [node name="Player" parent="." instance=ExtResource("4_louo5")]

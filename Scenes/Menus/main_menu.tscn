@@ -50,15 +50,19 @@ offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Start" type="Button" parent="VBoxContainer"]
+[node name="Demo Level" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-text = "Start"
-script = SubResource("GDScript_00ian")
+text = "Demo Level"
+
+[node name="Jungle" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Jungle"
 
 [node name="Quit" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 text = "Quit
 "
 
-[connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Demo Level" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Jungle" to="." method="_on_jungle_pressed"]
 [connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]
