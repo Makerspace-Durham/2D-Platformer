@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://q4m5tdh5xxlv" path="res://Assets/Environment/Sky_Tileset.png" id="1_heh1l"]
 [ext_resource type="Texture2D" uid="uid://b68mrcmre16e7" path="res://Assets/Environment/Jungle_Tileset.png" id="2_7xcvv"]
 [ext_resource type="Texture2D" uid="uid://bkyk4c04skr8x" path="res://Assets/Environment/Misc/brick_wall.png" id="3_1c1cf"]
-[ext_resource type="PackedScene" uid="uid://cowaxvme6in5l" path="res://Scenes/Characters/player.tscn" id="3_a2061"]
+[ext_resource type="PackedScene" uid="uid://cowaxvme6in5l" path="res://Scenes/Player/player.tscn" id="3_a2061"]
 [ext_resource type="Texture2D" uid="uid://bjythgq5xya6u" path="res://Assets/Environment/Misc/brick_wall_end.png" id="4_5176n"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y75d0"]
