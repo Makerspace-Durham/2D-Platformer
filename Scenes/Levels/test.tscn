@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://cswkfrkql6dad"]
+[gd_scene load_steps=13 format=4 uid="uid://cswkfrkql6dad"]
 
 [ext_resource type="Texture2D" uid="uid://c85643a6p25px" path="res://Assets/Environment/basic_tileset.png" id="1_mpkvf"]
 [ext_resource type="Texture2D" uid="uid://bkyk4c04skr8x" path="res://Assets/Environment/Misc/brick_wall.png" id="2_uc6kv"]
@@ -54,42 +54,6 @@ texture = ExtResource("2_uc6kv")
 texture = ExtResource("3_ippxl")
 0:0/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8hmml"]
-texture = ExtResource("4_3lu73")
-3:0/0 = 0
-4:0/0 = 0
-5:0/0 = 0
-6:0/0 = 0
-0:7/0 = 0
-1:7/0 = 0
-2:7/0 = 0
-0:9/0 = 0
-1:9/0 = 0
-2:9/0 = 0
-3:9/0 = 0
-4:9/0 = 0
-5:9/0 = 0
-6:9/0 = 0
-7:9/0 = 0
-0:3/size_in_atlas = Vector2i(2, 2)
-0:3/0 = 0
-2:3/size_in_atlas = Vector2i(2, 2)
-2:3/0 = 0
-6:3/size_in_atlas = Vector2i(2, 2)
-6:3/0 = 0
-4:3/0 = 0
-4:4/0 = 0
-5:3/0 = 0
-5:4/0 = 0
-7:0/0 = 0
-8:0/0 = 0
-9:0/0 = 0
-
-[sub_resource type="TileSet" id="TileSet_sbfgb"]
-sources/0 = SubResource("TileSetAtlasSource_wm2tt")
-sources/1 = SubResource("TileSetAtlasSource_d1sd7")
-sources/2 = SubResource("TileSetAtlasSource_8hmml")
-
 [node name="Test" type="Node2D"]
 
 [node name="Environment" type="Node2D" parent="."]
@@ -108,6 +72,7 @@ tile_set = SubResource("TileSet_sbfgb")
 
 [node name="Player" parent="." instance=ExtResource("4_louo5")]
 position = Vector2(-526, 234)
+collision_mask = 3
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 
